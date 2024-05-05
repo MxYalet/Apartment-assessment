@@ -1,0 +1,295 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_47458"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="75dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/bg_header"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/layout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Locker Service"
+                android:textColor="@color/WhiteSmoke"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/ib_back"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="23dp"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                android:src="@drawable/filter_icon" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/houseImage"
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:layout_below="@id/top"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/house_image" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Package summary"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_total_earning_amt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical"
+                android:text="Q1-Q3"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/intro"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_date_revenue"
+                    android:drawableLeft="@drawable/red_dot"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Delivered Packages"
+                    android:textColor="@color/black"
+                    android:textSize="14sp">
+
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_date_revenue"
+                    android:drawableLeft="@drawable/green_dot"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Pending packages"
+                    android:textColor="@color/black"
+                    android:textSize="14sp">
+
+
+                </TextView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.db.williamchart.view.BarChartView
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:layout_below="@id/ll_range"
+            android:layout_marginTop="5dp"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/deliveredLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chart"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/homepage_card"
+            android:elevation="2dp">
+
+            <ImageView
+                android:id="@+id/drugIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/delivered_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/drugBackIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="21dp"
+                android:src="@drawable/vector_one"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/drugsTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="30dp"
+                android:text="Delivered Packages"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/drugBackIcon"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/drugIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="21dp"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/drugBackIcon"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@id/drugsTextView"
+                app:layout_constraintTop_toBottomOf="@id/drugsTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pendingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deliveredLayout"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/homepage_card"
+            android:elevation="2dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/dependentIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/pending_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/dependentBackIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="21dp"
+                android:src="@drawable/vector_one"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dependentTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="30dp"
+                android:text="Pending packages"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/dependentBackIcon"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/dependentIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="21dp"
+                android:text="6"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/dependentBackIcon"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@id/dependentTextView"
+                app:layout_constraintTop_toBottomOf="@id/dependentTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+</layout>

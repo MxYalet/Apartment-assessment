@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- Add your main activity content here -->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/bottomTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/White"
+        android:elevation="2dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/homeTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginBottom="0dp"
+            android:icon="@drawable/icon_home"
+            android:text="Home" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/locker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/locker_icon"
+            android:text="Locker" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/rentTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/padlock"
+            android:text="Rent" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/advertTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/advert_icon"
+            android:text="Advert" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/profileTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/profile_icon"
+            android:text="Account" />
+
+    </com.google.android.material.tabs.TabLayout>
+</RelativeLayout>
