@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -7,6 +9,12 @@ android {
     namespace = "com.example.assessment"
     compileSdk = 34
 
+    viewBinding {
+        enable = true
+    }
+    dataBinding {
+        enable = true
+    }
     defaultConfig {
         applicationId = "com.example.assessment"
         minSdk = 33
@@ -47,5 +55,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation ("com.diogobernardino:williamchart:3.10.1")
+
 
 }

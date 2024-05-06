@@ -1,0 +1,358 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/tabs"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/houseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/home"
+            android:elevation="2dp">
+
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:id="@+id/close_btn"
+                android:layout_marginEnd="348dp"
+                android:src="@drawable/cancel2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.047" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="16dp"
+            android:text="Introduction"
+            android:id="@+id/introduction_text"
+            android:textColor="@color/black"
+            android:layout_below="@id/houseLayout"
+            android:textStyle="bold"
+            android:textSize="26sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/welcome_text"
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="16dp"
+            android:text="Welcome to HubLocker, your gateway to hassle-free parcel management. Our locker services redefine convenience, providing a seamless experience for sending, receiving, and picking up your packages."
+            android:textColor="@color/black"
+            android:layout_below="@id/introduction_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:id="@+id/benefit_text"
+            android:text="Key Benefits"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/welcome_text"
+            android:textSize="26sp" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:id="@+id/ll_item_card2"
+            android:layout_below="@id/benefit_text"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp">
+
+
+            <ImageView
+                android:src="@drawable/check"
+                android:layout_width="24dp"
+                android:layout_height="23.4dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Secure and Convenient:"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/Black"
+                        android:layout_marginStart="10dp"
+                        />
+
+                    <TextView
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:text="Our lockers prioritize the safety of your parcels."
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:textColor="@color/grey_blue"
+                        android:layout_marginStart="10dp"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:id="@+id/ll_item_card3"
+            android:layout_below="@id/ll_item_card2"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp">
+
+
+            <ImageView
+                android:src="@drawable/check"
+                android:layout_width="24dp"
+                android:layout_height="23.4dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Accessibility"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/Black"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:text="Access your packages at any time to fit your schedule."
+                        android:textStyle="normal"
+                        android:textSize="16sp"
+                        android:textColor="@color/grey_blue"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:id="@+id/ll_item_card4"
+            android:layout_below="@id/ll_item_card3"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp">
+
+
+            <ImageView
+                android:src="@drawable/check"
+                android:layout_width="24dp"
+                android:layout_height="23.4dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24/7 Contactless Transactions:"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/Black"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:text="Embrace contactless transactions for a safer"
+                        android:textStyle="normal"
+                        android:textSize="16sp"
+                        android:textColor="@color/grey_blue"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:id="@+id/ll_item_card5"
+            android:layout_below="@id/ll_item_card4"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp">
+
+
+            <ImageView
+                android:src="@drawable/check"
+                android:layout_width="24dp"
+                android:layout_height="23.4dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Vacation"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/Black"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:text="Schedule periods when you won't be available to pick up packages.
+Your parcels are securely stored until your return, ensuring stress-free parcel"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:textColor="@color/grey_blue"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:id="@+id/ll_item_card6"
+            android:layout_below="@id/ll_item_card5"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp">
+
+
+            <ImageView
+                android:src="@drawable/check"
+                android:layout_width="24dp"
+                android:layout_height="23.4dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Family-Friendly Convenience:"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/Black"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:text="Easily add household members to your Hublocker"
+                        android:textStyle="normal"
+                        android:textSize="16sp"
+                        android:textColor="@color/grey_blue"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
