@@ -52,19 +52,44 @@
         android:layout_marginTop="5dp"
         android:orientation="horizontal">
 
-        <LinearLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:id="@+id/year2023TextView"
+            android:id="@+id/year2023CardView"
+            android:backgroundTint="@color/title_divider"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/text"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="2023"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+
+
+            </TextView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/year2024CardView"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/bg_date_revenue"
                 android:gravity="center"
                 android:padding="5dp"
@@ -75,31 +100,8 @@
 
             </TextView>
 
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/year2024TextView"
-                android:background="@drawable/bg_date_revenue"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="2023"
-                android:textColor="@color/black"
-                android:textSize="14sp">
-
-
-            </TextView>
-
-
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 
@@ -116,22 +118,20 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="5dp"
         android:orientation="horizontal">
 
-        <LinearLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/title_divider"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/q1TextView"
-                android:background="@drawable/bg_date_revenue"
+                android:id="@+id/q1CardView"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="Q1"
@@ -141,20 +141,20 @@
 
             </TextView>
 
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-        <LinearLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/title_divider"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/q2TextView"
-                android:background="@drawable/bg_date_revenue"
+                android:id="@+id/q2CardView"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="Q2"
@@ -164,20 +164,20 @@
 
             </TextView>
 
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-        <LinearLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/title_divider"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/q3TextView"
-                android:background="@drawable/bg_date_revenue"
+                android:id="@+id/q3CardView"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="Q3"
@@ -187,13 +187,30 @@
 
             </TextView>
 
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-        <LinearLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/title_divider"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q4CardView"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Q4"
+                android:textColor="@color/black"
+                android:textSize="14sp">
+
+
+            </TextView>
+
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 
@@ -213,18 +230,17 @@
         android:layout_marginTop="5dp"
         android:orientation="horizontal">
 
-        <LinearLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/title_divider"
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/deliveredPackagesTextView"
-                android:background="@drawable/bg_date_revenue"
+                android:id="@+id/deliveredPackagesCardView"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="Delivered Packages"
@@ -234,20 +250,19 @@
 
             </TextView>
 
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-        <LinearLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/title_divider"
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/pendingPackagesTextView"
-                android:background="@drawable/bg_date_revenue"
+                android:id="@+id/pendingPackagesCardView"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="Pending packages"
@@ -258,7 +273,7 @@
             </TextView>
 
 
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 

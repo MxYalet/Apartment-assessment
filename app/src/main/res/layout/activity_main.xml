@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomTab"/>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/bottomTab"
@@ -16,7 +17,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
-        android:background="@color/White"
+        app:tabIndicatorColor="@color/bg_header"
+        app:tabSelectedTextColor="@color/bg_header"
+        app:tabSelectedTextAppearance="@color/bg_header"
+        android:background="@drawable/tab_card"
         android:elevation="2dp">
 
         <com.google.android.material.tabs.TabItem

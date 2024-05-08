@@ -36,16 +36,17 @@ class PendingPackageFragment: Fragment() {
 
 
         backButton.setOnClickListener {
-            mainActivity.navigateToFragment(DeliveredPackageFragment())         }
+            mainActivity.supportFragmentManager.popBackStack()
+        }
     }
 
     private fun setupRecyclerView() {
         val packages = listOf(
-            Package("Package 1", "Address 1", "Date 1"),
-            Package("Package 2", "Address 2", "Date 2"),
-            Package("Package 3", "Address 3", "Date 3"),
-            Package("Package 4", "Address 4", "Date 4"),
-            Package("Package 5", "Address 5", "Date 5")
+            Package("Teddy Bear", "Ikeja, Lagos", "12-04-24"),
+            Package("Monitor", "Ikota villa, Lagos", "12-04-24"),
+            Package("Teddy bear", "Alimosho", "15-04-24"),
+            Package("Gift box", "Salvation road, Lagos", "12-04-24"),
+            Package("Track pad", "Berger", "05-01-24")
         )
 
         val adapter = PendingPackageAdapter(packages)

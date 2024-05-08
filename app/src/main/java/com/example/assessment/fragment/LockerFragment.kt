@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.text.Layout
 import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -15,10 +14,9 @@ import android.view.ViewTreeObserver
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import com.db.williamchart.view.BarChartView
 import com.example.assessment.R
 import com.example.assessment.activity.AnnouncementActivity
 import com.example.assessment.activity.MainActivity
@@ -30,16 +28,13 @@ class LockerFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var sharedPreferences: SharedPreferences
 
-    private lateinit var selectedYearTextView: TextView
-    private lateinit var selectedQuarterTextView: TextView
-    private lateinit var deliveredPackagesTextView: TextView
-    private lateinit var pendingPackagesTextView: TextView
-
-
-
+    private var selectedYear: String? = null
+    private var selectedQuarter: String? = null
+    private var selectedPackageType: String? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentLockerBinding.inflate(inflater, container, false)
+
         return binding.root
 
     }
@@ -52,25 +47,37 @@ class LockerFragment : Fragment() {
         if (shouldShowPopup()) {
             showPopup()
         }
+        val chart: BarChartView = binding.chart
 
-        val barSet = listOf(
+        val deliveredPackages = listOf(
             "JAN" to 4F,
             "FEB" to 7F,
             "MAR" to 2F,
-            "MAY" to 2.3F,
             "APR" to 5F,
+            "MAY" to 2F,
             "JUN" to 4F
         )
 
-        val horizontalBarSet = listOf(
-            "PORRO" to 5F,
-            "FUSCE" to 6.4F,
-            "EGET" to 3F
+        val pendingPackages = listOf(
+            "JAN" to 2F,
+            "FEB" to 3F,
+            "MAR" to 1F,
+            "APR" to 2F,
+            "MAY" to 1F,
+            "JUN" to 3F
         )
 
-        binding.chart.animation.duration = animationDuration
+        chart.animation.duration = animationDuration
+        chart.animate(
+            pendingPackages
+        )
 
-        binding.chart.animate(barSet)
+        chart.animation.duration = animationDuration
+        chart.animate(
+            deliveredPackages
+        )
+
+
         mainActivity = activity as MainActivity
 
         binding.deliveredLayout.setOnClickListener {
@@ -82,12 +89,15 @@ class LockerFragment : Fragment() {
       binding.ibFilter.setOnClickListener {
           showfilter()
       }
-
-
-
     }
 
 
+
+    data class BarEntry(
+        val month: String,
+        val delivered: Float,
+        val pending: Float
+    )
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -109,6 +119,7 @@ class LockerFragment : Fragment() {
 
         return currentTime - lastPopupTime >= twoWeeksInMillis
     }
+
     private fun showPopup() {
         val inflater = LayoutInflater.from(requireContext())
         val popupView = inflater.inflate(R.layout.layout_popup, null)
@@ -150,6 +161,7 @@ class LockerFragment : Fragment() {
         val closeButton = popupView.findViewById<ImageButton>(R.id.ib_back)
         val apply = popupView.findViewById<Button>(R.id.apply_btn)
 
+
         val builder = AlertDialog.Builder(requireContext())
         builder.setView(popupView)
         val dialog = builder.create()
@@ -170,8 +182,5 @@ class LockerFragment : Fragment() {
         layoutParams.gravity = Gravity.BOTTOM
         dialog.window?.attributes = layoutParams
     }
-
-
-    private fun applyFilters() {}
 
 }

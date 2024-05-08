@@ -30,7 +30,7 @@
                 android:id="@+id/close"
                 android:layout_marginEnd="348dp"
                 android:background="@null"
-                android:src="@drawable/cancel"
+                android:src="@drawable/cancel2"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

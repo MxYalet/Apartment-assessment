@@ -14,11 +14,4 @@ class LockerActivity: AppCompatActivity() {
             .commit()
     }
 
-    // Function to navigate to a fragment
-    fun navigateToFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .addToBackStack(null)
-            .commit()
-    }
 }
