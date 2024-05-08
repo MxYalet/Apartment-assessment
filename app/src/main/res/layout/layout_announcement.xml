@@ -25,11 +25,12 @@
 
 
             <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="60dp"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
                 android:id="@+id/close"
                 android:layout_marginEnd="348dp"
-                android:src="@drawable/cancel2"
+                android:background="@null"
+                android:src="@drawable/cancel"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -91,7 +92,7 @@
 
 
             <ImageView
-                android:src="@drawable/check"
+                android:src="@drawable/check_icon"
                 android:layout_width="24dp"
                 android:layout_height="23.4dp"
                 android:scaleType="fitCenter"
@@ -147,7 +148,7 @@
 
 
             <ImageView
-                android:src="@drawable/check"
+                android:src="@drawable/check_icon"
                 android:layout_width="24dp"
                 android:layout_height="23.4dp"
                 android:scaleType="fitCenter"
@@ -201,7 +202,7 @@
 
 
             <ImageView
-                android:src="@drawable/check"
+                android:src="@drawable/check_icon"
                 android:layout_width="24dp"
                 android:layout_height="23.4dp"
                 android:scaleType="fitCenter"
@@ -256,7 +257,7 @@
 
 
             <ImageView
-                android:src="@drawable/check"
+                android:src="@drawable/check_icon"
                 android:layout_width="24dp"
                 android:layout_height="23.4dp"
                 android:scaleType="fitCenter"
@@ -311,7 +312,7 @@ Your parcels are securely stored until your return, ensuring stress-free parcel"
 
 
             <ImageView
-                android:src="@drawable/check"
+                android:src="@drawable/check_icon"
                 android:layout_width="24dp"
                 android:layout_height="23.4dp"
                 android:scaleType="fitCenter"

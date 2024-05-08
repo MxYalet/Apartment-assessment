@@ -31,16 +31,14 @@ class DeliveredPackageFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recyclerViewDeliveredPackages)
         setupRecyclerView()
 
-        val backButton = view.findViewById<ImageButton>(R.id.id_back)
+        val backButton = view.findViewById<ImageButton>(R.id.backButton)
 
         mainActivity = activity as MainActivity
-
 
         backButton.setOnClickListener {
             activity?.onBackPressed()
         }
     }
-
 
     private fun setupRecyclerView() {
         val packages = listOf(

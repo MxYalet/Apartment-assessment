@@ -42,7 +42,6 @@ class LockerFragment : Fragment() {
         _binding = FragmentLockerBinding.inflate(inflater, container, false)
         return binding.root
 
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -78,8 +77,7 @@ class LockerFragment : Fragment() {
             mainActivity.navigateToFragment(DeliveredPackageFragment())   }
 
         binding.pendingLayout.setOnClickListener {
-            mainActivity.navigateToFragment(PendingPackageFragment())
-        }
+            (activity as MainActivity).navigateToFragment(PendingPackageFragment())        }
 
       binding.ibFilter.setOnClickListener {
           showfilter()

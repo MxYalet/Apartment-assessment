@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.example.assessment.R
 import com.example.assessment.adapter.PagerAdapter
+import com.example.assessment.fragment.LockerFragment
+import com.example.assessment.fragment.MainFragment
 import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +17,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, MainFragment())
+            .commit()
 
         viewPager = findViewById(R.id.viewPager)
         tabLayout = findViewById(R.id.bottomTab)
