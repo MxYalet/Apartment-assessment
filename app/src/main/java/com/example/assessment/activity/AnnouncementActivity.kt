@@ -14,7 +14,7 @@ class AnnouncementActivity : AppCompatActivity() {
         setContentView(R.layout.layout_announcement)
 
 
-        val closeButton: ImageButton = findViewById(R.id.close_btn)
+        val closeButton: ImageButton = findViewById(R.id.close)
         closeButton.setOnClickListener {
             finish()
         }

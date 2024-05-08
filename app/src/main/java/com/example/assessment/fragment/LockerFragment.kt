@@ -107,9 +107,8 @@ class LockerFragment : Fragment() {
     private fun shouldShowPopup(): Boolean {
         val lastPopupTime = sharedPreferences.getLong("last_popup_time", 0)
         val currentTime = System.currentTimeMillis()
-        val twoWeeksInMillis = 2 * 7 * 24 * 60 * 60 * 1000L // Two weeks in milliseconds
+        val twoWeeksInMillis = 2 * 7 * 24 * 60 * 60 * 1000L
 
-        // Check if two weeks have passed since the last popup time
         return currentTime - lastPopupTime >= twoWeeksInMillis
     }
     private fun showPopup() {
@@ -128,17 +127,15 @@ class LockerFragment : Fragment() {
         }
 
         dialog.setOnShowListener {
-            // Delay setting the click listener until after the dialog is fully shown
             popupView.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
                 override fun onGlobalLayout() {
-                    // Remove the listener to prevent multiple invocations
                     popupView.viewTreeObserver.removeOnGlobalLayoutListener(this)
 
                     val introductionText = popupView.findViewById<TextView>(R.id.learnHowTextView)
                     introductionText.setOnClickListener {
                         val intent = Intent(requireContext(), AnnouncementActivity::class.java)
                         startActivity(intent)
-                        dialog.dismiss() // Dismiss the dialog after starting the activity
+                        dialog.dismiss()
                     }
                 }
             })
@@ -153,12 +150,17 @@ class LockerFragment : Fragment() {
         val inflater = LayoutInflater.from(requireContext())
         val popupView = inflater.inflate(R.layout.layout_filter, null)
         val closeButton = popupView.findViewById<ImageButton>(R.id.ib_back)
+        val apply = popupView.findViewById<Button>(R.id.apply_btn)
 
         val builder = AlertDialog.Builder(requireContext())
         builder.setView(popupView)
         val dialog = builder.create()
 
         closeButton.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        apply.setOnClickListener {
             dialog.dismiss()
         }
         dialog.show()
@@ -172,8 +174,6 @@ class LockerFragment : Fragment() {
     }
 
 
-    private fun applyFilters() {
-        // Implement logic to apply selected filters
-    }
+    private fun applyFilters() {}
 
 }

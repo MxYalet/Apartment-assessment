@@ -4,15 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.assessment.R
+import com.example.assessment.activity.MainActivity
 import com.example.assessment.adapter.DeliveredPackagesAdapter
 
 class DeliveredPackageFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var mainActivity: MainActivity
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +29,18 @@ class DeliveredPackageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recyclerView = view.findViewById(R.id.recyclerViewDeliveredPackages)
-        setupRecyclerView()    }
+        setupRecyclerView()
+
+        val backButton = view.findViewById<ImageButton>(R.id.id_back)
+
+        mainActivity = activity as MainActivity
+
+
+        backButton.setOnClickListener {
+            activity?.onBackPressed()
+        }
+    }
+
 
     private fun setupRecyclerView() {
         val packages = listOf(

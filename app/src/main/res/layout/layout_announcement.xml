@@ -27,7 +27,7 @@
             <ImageButton
                 android:layout_width="40dp"
                 android:layout_height="60dp"
-                android:id="@+id/close_btn"
+                android:id="@+id/close"
                 android:layout_marginEnd="348dp"
                 android:src="@drawable/cancel2"
                 app:layout_constraintBottom_toBottomOf="parent"

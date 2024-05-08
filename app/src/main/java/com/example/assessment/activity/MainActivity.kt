@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         tabLayout.getTabAt(4)?.setIcon(R.drawable.profile_icon)
     }
 
-    // Method to navigate to a specific fragment
     fun navigateToFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.viewPager, fragment)
